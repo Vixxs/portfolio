@@ -1,7 +1,7 @@
 <?php
 // Ce fichier est le point d'entrée de votre application
     require './vendor/autoload.php';
-    require './Core/AutoLoad.php';
+    require './core/AutoLoad.php';
 
     $url = isset($_GET['url']) ? $_GET['url'] : null;
     $postParams = isset($_POST) ? $_POST : null;
