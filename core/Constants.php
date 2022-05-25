@@ -7,17 +7,17 @@ final class Constants
 {
     // Les constantes relatives aux chemins
 
-    const VIEWS_DIRECTORY        = '/Views/';
+    const VIEWS_DIRECTORY        = '/views/';
 
-    const MODELS_DIRECTORY      = '/Models/';
+    const MODELS_DIRECTORY      = '/models/';
 
-    const CORE_DIRECTORY       = '/Core/';
+    const CORE_DIRECTORY       = '/core/';
 
-    const EXCEPTIONS_DIRECTORY  = '/Core/Exceptions/';
+    const EXCEPTIONS_DIRECTORY  = '/core/exceptions/';
 
-    const CONTROLLERS_DIRECTORY = '/Controllers/';
+    const CONTROLLERS_DIRECTORY = '/controllers/';
 
-    const MODULES_DIRECTORY = '/Modules/';
+    const MODULES_DIRECTORY = '/modules/';
 
 
     public static function rootDirectory() {
