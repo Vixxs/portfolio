@@ -1,6 +1,6 @@
 <?php
 
-require 'Core/Constants.php';
+require 'core/Constants.php';
 
 final class AutoLoad
 {
