@@ -1,0 +1,6 @@
+{
+    "name": "vixx/portfolio",
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}
