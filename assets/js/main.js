@@ -1,12 +1,13 @@
 $(document).ready(async function() {
     let cursor = writeCursor();
-    await sleep(1500)
+    await sleep(1500);
     await writeText('Designer');
     $('#scroll-icon').addClass('slide-bottom');
-    await sleep(1500)
+    await sleep(1500);
     await writeText('Discover me');
     clearInterval(cursor);
-    $('#home-text').addClass('hide-after')
+    $('#home-text').addClass('hide-after');
+    await sleep(250);
     $('#home-logo').removeClass('hide');
 });
 
