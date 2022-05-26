@@ -20,8 +20,6 @@
         </section>
     {% endblock %}
 
-
-
     <section class="full-height">
         <h2>Présentation</h2>
         <div class="row align-center">
@@ -64,120 +62,10 @@
 
     </section>
 
-    <section class="full-height">
-        <h2>Parcours</h2>
-        <div class="row">
-            <div class="card parcours">
-                <h3 class="">2018 - 2019</h3>
+    {% include "partials/parcours.twig" %}
+    {% include "partials/competences.twig" %}
+    {% include "partials/projets.twig" %}
+    {% include "partials/footer.twig" %}
 
-                <p>
-                    Bac STI2D
-                </p>
-                <span><span class="material-icons">location_on</span>Marseille, France</span>
 
-            </div>
-            <span class="next material-icons">
-                chevron_right
-            </span>
-            <div class="card parcours">
-                <h3>2019 - 2021</h3>
-                <p>
-                    DUT Informatique
-                </p>
-                <span><span class="material-icons">location_on</span>Aix-en-provence, France</span>
-            </div>
-            <span class="next material-icons">
-                chevron_right
-            </span>
-            <div class="card parcours relative">
-                <span class="in-progress">En cours</span>
-                <h3>2021 - 2022</h3>
-                <p>
-                    Licence professionnel Developpeur web<br>
-                </p>
-                <span>
-                    <span class="material-icons">location_on</span> Aix-en-provence
-                </span>
-            </div>
-    </section>
-
-    <section class="full-height white-section">
-        <h2>Compétences</h2>
-        <div class="row">
-            <div class="card" id="competences">
-                <div>
-                    <h3>
-                        <span class="material-icons">
-                        code
-                        </span> Developpement
-                    </h3>
-                    <ul class="competences-list">
-                        <li><i class="fab fa-php"></i>PHP</li>
-                        <li><i class="fab fa-java"></i>Java</li>
-                        <li><i class="fab fa-js-square"></i>Javascript</li>
-                        <li><i class="fab fa-python"></i>Python</li>
-                        <li><i class="fas fa-database"></i>SQL</li>
-                        <li><i class="fab fa-c++"></i>C++</li>
-                        <li><i class="fab fa-html5"></i>HTML</li>
-                        <li><i class="fab fa-css3-alt"></i>CSS</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>
-                        <span class="material-icons">
-                        design_services
-                        </span> Design
-                    </h3>
-                    <ul>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Figma</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="full-height white-section">
-        <h2>Portfolio</h2>
-        <div id="projects" class="row ">
-            <div class="project">
-                <img src="" alt="">
-                <h3>Projup</h3>
-                <p>Site de référencement de projet, </p>
-            </div>
-            <div class="project">
-                <img src="" alt="">
-                <h3>Klash</h3>
-                <p>Site de référencement de projet, </p>
-            </div>
-            <div class="project">
-                <img src="" alt="">
-                <h3>Vanestarre</h3>
-                <p>Site de référencement de projet, </p>
-            </div>
-            <div class="project">
-                <img src="" alt="">
-                <h3>Volleybot</h3>
-                <p>Site de référencement de projet, </p>
-            </div>
-            <div class="project">
-                <img src="" alt="">
-                <h3>IUT Stage</h3>
-                <p>Site de référencement de projet, </p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <span>
-            <img id="logo-footer" width="45px" src="assets/img/footer-logo.png" alt="logo-footer">
-            © Vincent Asta 2022
-        </span>
-        <div class="social-icon">
-            <i class="fab fa-github"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-behance"></i>
-        </div>
-    </footer>
 {% endblock %}

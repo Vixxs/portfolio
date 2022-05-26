@@ -5,7 +5,23 @@
     box-shadow: none;
     border: solid 1px #e6e6e6;
     flex-direction: row;
-    gap: 50px;
+    padding: 0;
+}
+
+#competences .box {
+    padding: 30px;
+}
+
+#competences h3 {
+    margin: 0;
+    color: black;
+    border: solid 1px #e6e6e6;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#competences h4 {
+    font-weight: 500;
 }
 
 #logo-section {
@@ -364,11 +380,35 @@ section h2 {
 }
 
 .competences-list {
+    padding-left: 15px;
     list-style: none;
 }
 
 .competences-list i {
+    width: 25px;
     margin-right: 10px;
+    font-size: 22px;
+}
+
+.competences-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.competences-box>* {
+    margin-right: 40px;
+}
+
+.vertical-line {
+    width: 1px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+.icon {
+    margin: 0;
+    margin-right: 10px;
+    width: 25px;
 }
 
 .profil-picture {
@@ -389,7 +429,7 @@ section h2 {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     transition: 0.3s;
     background-color: white;
     color: black;
@@ -520,7 +560,7 @@ footer span {
     flex-direction: column;
     font-size: 1em;
     border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     transition: 0.3s;
     background-color: white;
     color: black;
