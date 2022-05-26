@@ -14,10 +14,18 @@
 
 #competences h3 {
     margin: 0;
-    color: black;
-    border: solid 1px #e6e6e6;
+    color: white;
+    font-size: 17px;
     padding: 5px;
     border-radius: 5px;
+}
+
+.dev-color {
+    background-color: navy;
+}
+
+.design-color {
+    background-color: purple;
 }
 
 #competences h4 {
@@ -376,6 +384,7 @@ section h2 {
 .row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -384,10 +393,15 @@ section h2 {
     list-style: none;
 }
 
+.competences-list li {
+    margin-bottom: 10px;
+}
+
 .competences-list i {
-    width: 25px;
+    padding-left: 3px;
+    width: 23px;
     margin-right: 10px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .competences-box {
@@ -408,7 +422,8 @@ section h2 {
 .icon {
     margin: 0;
     margin-right: 10px;
-    width: 25px;
+    width: 23px;
+    padding-right: 3px;
 }
 
 .profil-picture {
@@ -526,6 +541,7 @@ footer {
     align-items: center;
     display: flex;
     color: black;
+    height: 70px;
     border-top: solid 1px #e6e6e6;
 }
 
@@ -533,7 +549,7 @@ footer>* {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px 30px;
+    margin: 0 20px;
 }
 
 footer span {
@@ -545,14 +561,16 @@ footer span {
 }
 
 .social-icon>i {
-    font-size: 1.2em;
-    margin-right: 10px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 5px;
 }
 
 .social-icon>i:hover {
     cursor: pointer;
     transition: 100ms;
-    color: #666666;
+    background-color: #e6e6e6;
 }
 
 .card {
