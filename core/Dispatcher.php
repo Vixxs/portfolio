@@ -52,18 +52,18 @@ final class Dispatcher
     public function run()
     {
         if (!class_exists($this->url['controleur'])) {
-            throw new ControleurException($this->url['controleur'] . " n'est pas un controleur valide.");
+            throw new ControllerException($this->url['controleur'] . " n'est pas un controleur valide.");
         }
 
         if (!method_exists($this->url['controleur'], $this->url['action'])) {
-            throw new ControleurException($this->url['action'] . " du contrôleur " .
+            throw new ControllerException($this->url['action'] . " du contrôleur " .
                 $this->url['controleur'] . " n'est pas une action valide.");
         }
 
         $called = call_user_func_array(array(new $this->url['controleur'],$this->url['action']), array($this->urlParams, $this->postParams ));
 
         if (false === $called) {
-            throw new ControleurException("L'action " . $this->url['action'] .
+            throw new ControllerException("L'action " . $this->url['action'] .
                 " du contrôleur " . $this->url['controleur'] . " a rencontré une erreur.");
         }
     }
