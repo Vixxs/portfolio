@@ -177,6 +177,47 @@
     margin-left: 10px;
 }
 
+#home-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 100vh;
+    transition: 100ms;
+}
+
+.hide {
+    display: none!important;
+}
+
+#typo-box {
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home-logo img {
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    width: 100px;
+}
+
+.triangle {
+    margin-top: -20px;
+    z-index: -1;
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 30px solid white;
+    border-right: 40px solid transparent;
+    bottom: 0;
+}
+
 .in-progress {
     font-size: 0.9em;
     font-weight: 600;

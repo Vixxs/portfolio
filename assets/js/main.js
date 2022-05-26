@@ -7,6 +7,7 @@ $(document).ready(async function() {
     await writeText('Discover me');
     clearInterval(cursor);
     $('#home-text').addClass('hide-after')
+    $('#home-logo').removeClass('hide');
 });
 
 
@@ -26,7 +27,6 @@ async function writeText(text) {
     for (var i = 0; i < currentText.length; i++) {
         let tmpText = $('#home-text').text();
         let tmpLength = $('#home-text').text().length
-        let rand = getRandomInt(200, 350);
         await sleep(150);
         $('#home-text').text(tmpText.slice(0, tmpLength - 1));
     }
