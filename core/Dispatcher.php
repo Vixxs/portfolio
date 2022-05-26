@@ -52,7 +52,7 @@ final class Dispatcher
     public function run()
     {
         if (!class_exists($this->url['controleur'])) {
-            throw new ControllerException($this->url['controleur'] . " n'est pas un controleur valide.");
+            $this->url['controleur'] = 'HomeController';          
         }
 
         if (!method_exists($this->url['controleur'], $this->url['action'])) {
