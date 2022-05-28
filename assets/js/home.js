@@ -1,4 +1,5 @@
 $(document).ready(async function() {
+    initHeader();
     likeBtn();
     let cursor = writeCursor();
     await sleep(1500);
@@ -77,4 +78,18 @@ function likeBtn() {
         });
 
     });
+}
+
+function initHeader() {
+    $('#scroll-icon').on('click', function() { goTo('presentation-title') });
+    $('#nav-presentation').on('click', function() { goTo('presentation-title') });
+    $('#nav-parcours').on('click', function() { goTo('parcours-title') });
+    $('#nav-competences').on('click', function() { goTo('competences-title') });
+    $('#nav-projets').on('click', function() { goTo('projets-title') });
+}
+
+function goTo(id) {
+    $('html, body').animate({
+        scrollTop: $('#' + id).offset().top - 160
+    }, 700);
 }

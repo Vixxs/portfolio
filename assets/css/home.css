@@ -1,3 +1,7 @@
+#menu-mobile {
+    display: none;
+}
+
 #competences {
     display: flex;
     justify-content: center;
@@ -10,12 +14,13 @@
 
 #competences .box {
     padding: 30px;
+    width: -webkit-fill-available;
 }
 
 #competences h3 {
     margin: 0;
     color: white;
-    font-size: 17px;
+    font-size: 1em;
     padding: 5px;
     border-radius: 5px;
 }
@@ -407,6 +412,7 @@ section h2 {
 .competences-box {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .competences-box>* {
@@ -475,7 +481,19 @@ section h2 {
     margin-bottom: 0;
 }
 
+#like-count,
+#like-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    line-height: normal;
+    height: 26px;
+}
+
 #like-box {
+    padding: 10px;
+    display: flex;
     align-self: flex-end;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -484,9 +502,11 @@ section h2 {
 #like-count {
     position: relative;
     text-align: center;
-    padding: 5px 8px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    margin-right: 10px;
+    width: auto;
+    padding: 0 8px;
 }
 
 #like-count::after {
@@ -495,7 +515,7 @@ section h2 {
     width: 10px;
     height: 10px;
     background-color: white;
-    top: 10px;
+    top: 8px;
     right: -6px;
     border: 1px solid #ddd;
     border-bottom: 0;
@@ -504,9 +524,6 @@ section h2 {
 }
 
 #like-btn {
-    margin: 10px;
-    align-self: flex-end;
-    padding: 5px;
     color: black;
     border-radius: 5px;
     border: 1px solid #ddd;
@@ -519,7 +536,6 @@ section h2 {
 
 #like-btn.liked {
     font-size: 1.2em;
-    padding: 5px 6px 6px 6px;
 }
 
 .line {
@@ -616,9 +632,8 @@ footer span {
 }
 
 #projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
     max-width: 1500px;
 }
 
@@ -728,5 +743,109 @@ footer span {
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
         opacity: 1;
+    }
+}
+
+@media (max-width: 992px) {
+    #background-video {
+        top: 30vh;
+        transform: scale(2);
+        transform-origin: center;
+    }
+    #home {
+        position: relative;
+        overflow: hidden;
+    }
+    #scroll-icon img {
+        width: 15px;
+    }
+    #scroll-icon {
+        height: 55px;
+        width: 35px;
+    }
+    h2 {
+        padding: 10px 15px;
+    }
+    .profil-card {
+        width: 250px;
+    }
+    #like-count::after {
+        top: 8px;
+    }
+    .triangle {
+        border-top: 25px solid white;
+    }
+    body {
+        font-size: 0.8em;
+    }
+    #home-logo img {
+        padding: 6px;
+        border-radius: 11px;
+        width: 65px;
+    }
+    #home-logo {
+        top: -75px;
+    }
+    #home-text {
+        font-size: 45px;
+    }
+    #competences {
+        flex-direction: column;
+    }
+    .row {
+        flex-direction: column;
+    }
+    .next {
+        transform: rotate(90deg);
+    }
+    nav {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        align-items: center;
+    }
+    header ul {
+        border-radius: 5px;
+        margin: 0;
+        padding: 0 20px;
+        height: auto;
+        color: black;
+        flex-direction: column;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        text-align: start;
+    }
+    header ul li {
+        width: 80%;
+        padding: 0;
+    }
+    header ul li::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: #e6e6e6;
+        left: 0;
+    }
+    header ul li:last-child::after {
+        display: none;
+    }
+    #menu-mobile {
+        font-size: 2.1em;
+        margin-right: 20px;
+        display: block;
+    }
+    #logo {
+        width: 26px;
+    }
+    .project {
+        width: auto;
+    }
+    #cv {
+        margin-left: 0;
     }
 }
