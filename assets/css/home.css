@@ -503,7 +503,7 @@ section h2 {
     transform: rotate(45deg);
 }
 
-.like {
+#like-btn {
     margin: 10px;
     align-self: flex-end;
     padding: 5px;
@@ -512,9 +512,14 @@ section h2 {
     border: 1px solid #ddd;
 }
 
-.like:hover {
+#like-btn:hover {
     cursor: pointer;
     background-color: rgb(240, 240, 240);
+}
+
+#like-btn.liked {
+    font-size: 1.2em;
+    padding: 5px 6px 6px 6px;
 }
 
 .line {

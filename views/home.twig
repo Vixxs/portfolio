@@ -1,5 +1,15 @@
 {% extends "base.twig" %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="assets/css/home.css">
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="assets/js/home.js"></script>
+{% endblock %}
+
 {% block content %}
     {% include "partials/header.twig" %}
     {% block home %}
@@ -39,10 +49,12 @@
                 </p>
                 <span class="end-line"></span>
                 <div id="like-box">
-                    <span id="like-count">0</span>
-                    <span class="like material-icons">
-                        thumb_up_off_alt
-                    </span>
+                    <span id="like-count">{{likesCount}}</span>
+                    {% if session.like == true %}
+                      <span id="like-btn" class="liked material-icons">thumb_up</span>
+                    {% else %}
+                        <span id="like-btn" class="material-icons">thumb_up_off_alt</span>
+                    {% endif %}
                 </div>
             </div>
             <div id="cv">

@@ -9,6 +9,8 @@ final class Constants
 
     const VIEWS_DIRECTORY        = '/views/';
 
+    const ASSETS_DIRECTORY        = '/assets/';
+
     const MODELS_DIRECTORY      = '/models/';
 
     const CORE_DIRECTORY       = '/core/';
@@ -45,6 +47,11 @@ final class Constants
     public static function controllersDirectory(): string
     {
         return self::rootDirectory() . self::CONTROLLERS_DIRECTORY;
+    }
+
+    public static function assetsDirectory(): string
+    {
+        return self::rootDirectory() . self::ASSETS_DIRECTORY;
     }
 
 }
