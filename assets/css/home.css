@@ -481,8 +481,8 @@ section h2 {
     margin-bottom: 0;
 }
 
-#like-count,
-#like-btn {
+.like-count,
+.like-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -491,7 +491,7 @@ section h2 {
     height: 26px;
 }
 
-#like-box {
+.like-box {
     padding: 10px;
     display: flex;
     align-self: flex-end;
@@ -499,7 +499,7 @@ section h2 {
     font-weight: 700;
 }
 
-#like-count {
+.like-count {
     position: relative;
     text-align: center;
     border: 1px solid #ddd;
@@ -509,7 +509,7 @@ section h2 {
     padding: 0 8px;
 }
 
-#like-count::after {
+.like-count::after {
     content: '';
     position: absolute;
     width: 10px;
@@ -523,13 +523,13 @@ section h2 {
     transform: rotate(45deg);
 }
 
-#like-btn {
+.like-btn {
     color: black;
     border-radius: 5px;
     border: 1px solid #ddd;
 }
 
-#like-btn:hover {
+.like-btn:hover {
     cursor: pointer;
     background-color: rgb(240, 240, 240);
 }
@@ -708,6 +708,18 @@ footer span {
     }
 }
 
+@keyframes pulse-navy {
+    0% {
+        box-shadow: 0 0 0 0 rgba(47, 57, 146, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    }
+}
+
 @-webkit-keyframes slide-in-blurred-left {
     0% {
         -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
@@ -848,4 +860,92 @@ footer span {
     #cv {
         margin-left: 0;
     }
+}
+
+#contact-box {
+    animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    background-color: white;
+    color: black;
+    margin: 20px;
+    border-radius: 5px;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid #ddd;
+}
+
+#contact-box p {
+    margin: 0;
+    padding-top: 0;
+}
+
+#contact-box button {
+    border: 1px solid #ddd;
+    color: black;
+    border-radius: 5px;
+    background-color: white;
+    font-weight: bold;
+    padding: 6px;
+    margin-right: 10px;
+}
+
+#contact-box button:hover {
+    transition: 50ms;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+}
+
+#contact-box .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+}
+
+#contact-box .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #ddd;
+}
+
+#contact-box>* {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#contact-box .navy-btn {
+    background-color: navy;
+    color: white;
+    border: 1px solid navy;
+    animation: pulse-navy 2s infinite;
+}
+
+#contact-box .navy-btn:hover {
+    border: 1px solid rgb(53, 53, 184);
+    background-color: rgb(53, 53, 184);
+    transition: 50ms;
+    cursor: pointer;
+}
+
+#contact-box .footer>* {
+    margin: 0 10px 0 20px;
+}
+
+#contact-box .close:hover {
+    cursor: pointer;
+}
+
+#contact-box .header>* {
+    padding: 0 20px;
 }

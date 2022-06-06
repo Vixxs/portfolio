@@ -48,14 +48,7 @@
                 <p>Bonjour et bienvenue sur mon portfolio, <br>Je suis un développeur web junior et graphiste.
                 </p>
                 <span class="end-line"></span>
-                <div id="like-box">
-                    <span id="like-count">{{likesCount}}</span>
-                    {% if session.like == true %}
-                      <span id="like-btn" class="liked material-icons">thumb_up</span>
-                    {% else %}
-                        <span id="like-btn" class="material-icons">thumb_up_off_alt</span>
-                    {% endif %}
-                </div>
+                {% include "partials/like-box.twig" %}
             </div>
             <div id="cv">
                 <p>Télécharger mon CV</p>
@@ -71,13 +64,12 @@
                 </div>
             </div>
         </div>
-
     </section>
 
     {% include "partials/parcours.twig" %}
     {% include "partials/competences.twig" %}
     {% include "partials/projets.twig" %}
     {% include "partials/footer.twig" %}
-
+    {% include "partials/contact-box.twig" %}
 
 {% endblock %}

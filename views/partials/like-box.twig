@@ -1,0 +1,8 @@
+<div class="like-box">
+    <span class="like-count">{{likesCount}}</span>
+    {% if session.like == true %}
+      <span class="like-btn liked material-icons">thumb_up</span>
+    {% else %}
+        <span class="like-btn material-icons">thumb_up_off_alt</span>
+    {% endif %}
+</div>

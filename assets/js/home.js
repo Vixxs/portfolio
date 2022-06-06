@@ -1,6 +1,7 @@
 $(document).ready(async function() {
     initHeader();
     likeBtn();
+    showContact();
     let cursor = writeCursor();
     await sleep(1500);
     await writeText('Designer');
@@ -57,13 +58,13 @@ function getRandomInt(min, max) {
 }
 
 function likeBtn() {
-    $('#like-btn').on('click', function() {
+    $('.like-btn').on('click', function() {
         if ($(this).text() == 'thumb_up') {
-            $(this).text('thumb_up_off_alt');
-            $(this).removeClass('liked');
+            $('.like-btn').text('thumb_up_off_alt');
+            $('.like-btn').removeClass('liked');
         } else {
-            $(this).text('thumb_up');
-            $(this).addClass('liked');
+            $('.like-btn').text('thumb_up');
+            $('.like-btn').addClass('liked');
         }
 
         $.ajax({
@@ -74,7 +75,7 @@ function likeBtn() {
             }
         }).done(function(data) {
             data = JSON.parse(data);
-            $('#like-count').text(data.likesCount);
+            $('.like-count').text(data.likesCount);
         });
 
     });
@@ -92,4 +93,12 @@ function goTo(id) {
     $('html, body').animate({
         scrollTop: $('#' + id).offset().top - 160
     }, 700);
+}
+
+async function showContact() {
+    await sleep(10000);
+    $('#contact-box').show();
+    $('#contact-box .close').on('click', function() {
+        $('#contact-box').hide();
+    });
 }
