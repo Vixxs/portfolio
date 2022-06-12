@@ -644,9 +644,36 @@ footer span {
     align-items: center;
     margin: 15px;
     width: 300px;
+    position: relative;
     border: 1px solid #ddd;
     border-radius: 5px;
     height: 200px;
+}
+
+.project img {
+    position: absolute;
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.project .hover {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 5px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.project .hover>* {
+    text-align: center;
+    color: white;
+    max-width: 200px;
 }
 
 @-webkit-keyframes slide-bottom {
