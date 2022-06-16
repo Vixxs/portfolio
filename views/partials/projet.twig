@@ -1,7 +1,12 @@
 <div class="project">
     <img src="{{src}}" alt="{{title}}">
-    <div class="hover">
-        <h3>{{title}}</h3>
-        <p>{{description}}</p>
-    </div>
+    <p>{{description}}</p>
+    {% if status == "dev" %}
+        <span class="online">
+            <span class="material-icons">construction</span>
+            En développement
+        </span>
+    {% elseif status == "online" %}
+        <a href="http://{{href}}">{{href}}</a>
+    {% endif %}
 </div>

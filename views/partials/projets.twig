@@ -1,10 +1,12 @@
 <section class="full-height white-section">
     <h2 id="projets-title">Projets</h2>
     <div id="projects" class="row">
-        {% include "partials/projet.twig" with {'src': "assets/img/projets/projup.png", 'title': "Projup", 'description': "Site de référencement de projets"} %} 
-        {% include "partials/projet.twig" with {'src': "assets/img/projets/projup.png", 'title': "Klash", 'description': "Site de sondage et tchat en direct"} %} 
-        {% include "partials/projet.twig" with {'src': "assets/img/projets/projup.png", 'title': "Vanestarre", 'description': "Réseaux socials sur mesure pour une personne fictif"} %} 
-        {% include "partials/projet.twig" with {'src': "assets/img/projets/projup.png", 'title': "VolleyBot", 'description': "Bot discord pour faire un match de volley"} %} 
-        {% include "partials/projet.twig" with {'src': "assets/img/projets/projup.png", 'title': "IUT Stage", 'description': "Logiciel de gestion des stages"} %} 
+        {% include "partials/projet.twig" with {'src': "assets/img/projets/projup.png", 'status':'online', 'href':"www.projup.site", 'title': "Projup", 'description': "Site de référencement de projets"} %} 
+        {% include "partials/projet.twig" with {'src': "assets/img/projets/klash.png", 'status':'dev', 'title': "Klash", 'description': "Site de sondage et tchat en direct"} %} 
+        {% include "partials/projet.twig" with {'src': "assets/img/projets/volleybot.png", 'status':'dev', 'title': "VolleyBot", 'description': "Bot discord pour faire un match de volley"} %} 
     </div>
+    <a href="https://github.com/Vixxs?tab=repositories" class="github">
+        <i class="fab fa-github"></i>
+        Voir plus sur GitHub
+    </a>
 </section>
