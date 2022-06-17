@@ -2,11 +2,11 @@
     <img src="{{src}}" alt="{{title}}">
     <p>{{description}}</p>
     {% if status == "dev" %}
-        <span class="online">
+        <span class="dev">
             <span class="material-icons">construction</span>
             En développement
         </span>
     {% elseif status == "online" %}
-        <a href="http://{{href}}">{{href}}</a>
+        <a href="http://{{href}}" target="_blank">{{href}}</a>
     {% endif %}
 </div>
