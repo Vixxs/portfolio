@@ -7,16 +7,23 @@
     {% block title %}
     <title>Vixx - Portfolio</title>
     {% endblock %}
-    <meta name="description" content="Je suis Vincent ASTA, bienvenue sur mon portfolio">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+    {% block meta %}
+    <meta name="description" content="Vincent ASTA (Vixx), Developper/Designer junior. Je vous invite à voir mon portfolio et collaborer ensemble."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="twitter:image" content="assets/img/meta.png"/>
+    <meta name="twitter:image:src" content="assets/img/meta.png"/>
+    <meta name="twitter:site" content="@vixx"/>
+    <meta name="twitter:title" content="Vixx - Portfolio"/>
+    <meta name="twitter:description" content="Vincent ASTA (Vixx), Developper/Designer junior. Je vous invite à voir mon portfolio et collaborer ensemble."/>
+    <meta property="og:title" content="Vixx - Portfolio"/>
+    <meta property="og:site_name" content="Vixx"/>
+    <meta property="og:image" content="assets/img/meta.png"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Vincent ASTA (Vixx), Developper/Designer junior. Je vous invite à voir mon portfolio et collaborer ensemble."/>
     <meta name="author" content="Vincent ASTA"/>
     <meta name="copyright" content="Vincent ASTA"/>
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
+    <meta name="language" content="fr"/>
+    {% endblock %}
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
