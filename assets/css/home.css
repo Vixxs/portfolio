@@ -14,7 +14,7 @@
 
 #competences .box {
     padding: 30px;
-    width: -webkit-fill-available;
+    width: auto;
 }
 
 #competences h3 {
@@ -49,7 +49,7 @@
 }
 
 #logo {
-    width: 28px;
+    width: 35px;
     padding: 10px;
 }
 
@@ -106,6 +106,7 @@
 }
 
 #background-video {
+    width: 100%;
     filter: contrast(1.5) brightness(0.7);
     position: absolute;
     top: 30vh;
@@ -282,8 +283,23 @@
     display: none;
 }
 
+.header-switch {
+    color: black;
+}
+
+.header-switch #logo {
+    filter: invert();
+}
+
+.header-switch ul li:hover {
+    cursor: pointer;
+    transition: 100ms;
+    border: solid 1px #ddd;
+    background-color: rgba(26, 26, 26, 0.068);
+}
+
 header {
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     width: 100%;
     display: flex;
@@ -553,6 +569,42 @@ section h2 {
     margin-top: 20px;
 }
 
+#contact {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+#contact section {
+    background-color: navy;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    border-radius: 15px;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#contact section h2 {
+    margin: 0 70px 0 0;
+    padding: 0;
+    align-self: unset;
+    border: 0;
+}
+
+#contact section a {
+    text-decoration: none;
+    color: navy;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
 footer {
     width: 100%;
     background-color: white;
@@ -579,6 +631,7 @@ footer span {
 
 #logo-footer {
     margin-right: 7px;
+    width: 45px;
 }
 
 .social-icon>i {
@@ -855,6 +908,12 @@ footer span {
 }
 
 @media (max-width: 992px) {
+    #competences .box {
+        width: -webkit-fill-available;
+    }
+    .full-height {
+        padding: 50px 0;
+    }
     #projects {
         grid-template-columns: 1fr;
     }
@@ -949,9 +1008,15 @@ footer span {
         font-size: 2.1em;
         margin-right: 20px;
         display: block;
+        padding: 10px;
+    }
+    #menu-mobile:hover {
+        cursor: pointer;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.1);
     }
     #logo {
-        width: 26px;
+        width: 32px;
     }
     .project {
         width: 50vw;
@@ -985,7 +1050,8 @@ footer span {
     padding-top: 0;
 }
 
-#contact-box button {
+#contact-box button,
+#contact-box a {
     border: 1px solid #ddd;
     color: black;
     border-radius: 5px;
@@ -993,6 +1059,7 @@ footer span {
     font-weight: bold;
     padding: 6px;
     margin-right: 10px;
+    text-decoration: none;
 }
 
 #contact-box button:hover {

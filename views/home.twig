@@ -21,7 +21,7 @@
                     <span class="triangle"></span>
                 </div>
             </div>
-            <video id="background-video" width="100%" autoplay loop muted>
+            <video id="background-video"autoplay loop muted>
             <source src="assets/video/wave_background.mp4" type="video/mp4" />
             </video>
             <div id="scroll-icon">
@@ -34,7 +34,7 @@
         <h2 id="presentation-title">Présentation</h2>
         <div class="row align-center">
             <div class="profil-card" id="present">
-                <img src="https://randomuser.me/api/portraits/men/22.jpg" class="profil-picture">
+                <img src="https://randomuser.me/api/portraits/men/22.jpg" class="profil-picture" alt="profil-picture"/>
                 <div>
                     <strong>Vincent Asta</strong>
                     <span>(Vixx)</span>
@@ -69,6 +69,7 @@
     {% include "partials/parcours.twig" %}
     {% include "partials/competences.twig" %}
     {% include "partials/projets.twig" %}
+    {# {% include "partials/contact.twig" %} #}
     {% include "partials/footer.twig" %}
     {% include "partials/contact-box.twig" %}
 

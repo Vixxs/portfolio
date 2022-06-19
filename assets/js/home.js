@@ -2,6 +2,7 @@ $(document).ready(async function() {
     initHeader();
     likeBtn();
     showContact();
+    changeHeaderOnScroll();
     let cursor = writeCursor();
     await sleep(1500);
     await writeText('Designer');
@@ -96,9 +97,22 @@ function goTo(id) {
 }
 
 async function showContact() {
-    await sleep(10000);
+    await sleep(15000);
     $('#contact-box').show();
     $('#contact-box .close').on('click', function() {
         $('#contact-box').hide();
+    });
+}
+
+function changeHeaderOnScroll() {
+    $(window).scroll(function(event) {
+        let scrollChange = $('#competences-title').parent().offset().top - ($('header').height() / 2);
+        let st = $(this).scrollTop();
+        console.log(st);
+        if (st > scrollChange) {
+            $('header').addClass('header-switch');
+        } else {
+            $('header').removeClass('header-switch');
+        }
     });
 }
