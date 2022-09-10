@@ -908,6 +908,26 @@ footer span {
 }
 
 @media (max-width: 992px) {
+    header {
+        background-color: black;
+    }
+    .header-switch {
+        background-color: white;
+        border-bottom: 1px solid #ddd;
+    }
+    footer>span {
+        font-size: 7px;
+    }
+    #contact-box button,
+    #contact-box a {
+        margin-right: 5px;
+    }
+    #contact-box .footer>div:first-child {
+        display: flex;
+    }
+    #contact-box {
+        font-size: 0.8em;
+    }
     #competences .box {
         width: -webkit-fill-available;
     }
@@ -1005,18 +1025,20 @@ footer span {
         display: none;
     }
     #menu-mobile {
-        font-size: 2.1em;
-        margin-right: 20px;
+        font-size: 1.8em;
+        margin-right: 5px;
         display: block;
         padding: 10px;
     }
     #menu-mobile:hover {
         cursor: pointer;
         border-radius: 5px;
+        margin-right: 5px;
         background-color: rgba(255, 255, 255, 0.1);
     }
     #logo {
-        width: 32px;
+        width: 26px;
+        padding: 5px;
     }
     .project {
         width: 50vw;
@@ -1106,8 +1128,12 @@ footer span {
     cursor: pointer;
 }
 
-#contact-box .footer>* {
-    margin: 0 10px 0 20px;
+#contact-box .footer>div:first-child {
+    margin: 0 0 0 20px;
+}
+
+#contact-box .footer>div:last-child {
+    margin: 0 10px 0 0;
 }
 
 #contact-box .close:hover {
