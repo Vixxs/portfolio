@@ -335,6 +335,7 @@ header ul li:hover {
 
 html {
     font-family: 'Montserrat', sans-serif;
+    background-color: black;
 }
 
 h1 {
@@ -343,6 +344,10 @@ h1 {
     z-index: 1;
     font-weight: 200;
     color: white;
+}
+
+footer>span {
+    font-size: 0.7em;
 }
 
 .text {
@@ -1084,7 +1089,8 @@ footer span {
     text-decoration: none;
 }
 
-#contact-box button:hover {
+#contact-box button:hover,
+#contact-box .footer-btn:hover {
     transition: 50ms;
     background-color: rgb(240, 240, 240);
     cursor: pointer;
