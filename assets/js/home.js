@@ -126,6 +126,4 @@ function showMenu() {
             $('nav').show();
         }
     })
-
-    $('')
 }
