@@ -2,6 +2,7 @@ $(document).ready(async function() {
     initHeader();
     likeBtn();
     showContact();
+    showMenu();
     changeHeaderOnScroll();
     let cursor = writeCursor();
     await sleep(1500);
@@ -115,4 +116,16 @@ function changeHeaderOnScroll() {
             $('header').removeClass('header-switch');
         }
     });
+}
+
+function showMenu() {
+    $('#menu-mobile').on('click', function() {
+        if ($('nav').is(':visible')) {
+            $('nav').hide();
+        } else {
+            $('nav').show();
+        }
+    })
+
+    $('')
 }

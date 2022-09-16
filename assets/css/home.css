@@ -995,15 +995,15 @@ footer span {
     }
     nav {
         display: none;
+        width: 100%;
         position: absolute;
-        top: 0;
+        top: 55px;
         right: 0;
         align-items: center;
     }
     header ul {
-        border-radius: 5px;
         margin: 0;
-        padding: 0 20px;
+        padding: 0;
         height: auto;
         color: black;
         flex-direction: column;
@@ -1014,31 +1014,23 @@ footer span {
         text-align: start;
     }
     header ul li {
-        width: 80%;
-        padding: 0;
-    }
-    header ul li::after {
-        content: '';
-        position: absolute;
-        display: block;
         width: 100%;
-        height: 1px;
-        background-color: #e6e6e6;
-        left: 0;
+        padding: 10px 0px 10px 25px;
     }
-    header ul li:last-child::after {
-        display: none;
+    header ul li:hover {
+        background-color: #ddd;
+        border-radius: 0;
     }
     #menu-mobile {
         font-size: 1.8em;
-        margin-right: 5px;
+        margin-right: 9px;
         display: block;
-        padding: 10px;
+        padding: 7px 8px;
     }
     #menu-mobile:hover {
         cursor: pointer;
         border-radius: 5px;
-        margin-right: 5px;
+        margin-right: 9px;
         background-color: rgba(255, 255, 255, 0.1);
     }
     #logo {
