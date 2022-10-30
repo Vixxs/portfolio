@@ -639,14 +639,20 @@ footer span {
     width: 45px;
 }
 
-.social-icon>i {
+.social-icon>a {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.3em;
+    text-decoration: none;
     border-radius: 5px;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
+    color: black;
     margin-right: 5px;
 }
 
-.social-icon>i:hover {
+.social-icon>a:hover {
     cursor: pointer;
     transition: 100ms;
     background-color: #e6e6e6;
